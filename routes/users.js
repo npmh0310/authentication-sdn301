@@ -1,9 +1,11 @@
 var express = require('express');
-var router = express.Router();
-const bodyParser = require('body-parser');
+var router = express.Router(); // Tạo một đối tượng router để xử lý các tuyến đường liên quan đến người dùng.
+const bodyParser = require('body-parser'); // Middleware để phân tích các yêu cầu HTTP và truy cập dữ liệu được gửi đến từ form.
 var User = require('../models/user');
 // update passport
 var passport = require('passport');
+
+// Sử dụng bodyParser
 router.use(bodyParser.json());
 
 router.post('/signup', (req, res, next) => {
