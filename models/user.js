@@ -3,21 +3,6 @@ var Schema = mongoose.Schema; //  Được sử dụng để định nghĩa cấ
 var passportLocalMongoose = require('passport-local-mongoose'); //Plugin cho Mongoose, giúp quản lý xác thực người dùng sử dụng username và password.
 
 // Sử dụng đối tượng Schema để định nghĩa cấu trúc của User trong cơ sở dữ liệu MongoDB.
-var User = new Schema({
-    username: {
-        type: String,
-        required: true,
-        unique: true
-    },
-    password:  {
-        type: String,
-        required: true
-    },
-    admin:   {
-        type: Boolean,
-        default: false
-    }
-});
 
 var User = new Schema({
     admin: {
